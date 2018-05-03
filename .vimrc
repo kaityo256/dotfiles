@@ -1,21 +1,5 @@
 "------------------------------------------------------------------------
-" カレントディレクトリに.vimrc.localがあったら読み込む
-" ALEにinclude pathを教えるのに使う
-"------------------------------------------------------------------------
-augroup vimrc-local
-  autocmd!
-  autocmd BufNewFile,BufReadPost * call s:vimrc_local(expand('<afile>:p:h'))
-augroup END
-
-function! s:vimrc_local(loc)
-  let files = findfile('.vimrc.local', escape(a:loc, ' ') . ';', -1)
-  for i in reverse(filter(files, 'filereadable(v:val)'))
-    source `=i`
-  endfor
-endfunction
-
-"------------------------------------------------------------------------
-"   各種設定
+"   各種基本設定
 "------------------------------------------------------------------------
 " 行番号は非表示
 set nonumber
@@ -43,6 +27,22 @@ nnoremap <ESC><ESC> :<C-u>nohlsearch<cr><Esc>
 
 " コメント中に改行してもコメントが追加されないようにする
 autocmd FileType * setlocal formatoptions-=ro
+
+"------------------------------------------------------------------------
+" カレントディレクトリに.vimrc.localがあったら読み込む
+" ALEにinclude pathを教えるのに使う
+"------------------------------------------------------------------------
+augroup vimrc-local
+  autocmd!
+  autocmd BufNewFile,BufReadPost * call s:vimrc_local(expand('<afile>:p:h'))
+augroup END
+
+function! s:vimrc_local(loc)
+  let files = findfile('.vimrc.local', escape(a:loc, ' ') . ';', -1)
+  for i in reverse(filter(files, 'filereadable(v:val)'))
+    source `=i`
+  endfor
+endfunction
 
 "------------------------------------------------------------------------
 " *.cpp, *.hppを保存時に自動でastyleをかける
@@ -91,9 +91,11 @@ if dein#load_state(s:dein_dir)
   call dein#end()
   call dein#save_state()
 endif
+"------------------------------------------------------------------------
 
-" ruby-formatter/rufo-vim
+" Ruby Formatter (rufo)を使う
 let g:rufo_auto_formatting=1
+
 " ハイライト表示
 syntax on
 " ファイルタイプを(インデントやプラグインも含めて)有効化
