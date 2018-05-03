@@ -56,7 +56,7 @@ endfunction
 
 command! PerformAstyle call _performAstyle()
 
-augroup auto_style
+augroup auto_astyle
   autocmd!
   autocmd bufWritePost *.cpp :PerformAstyle
   autocmd bufWritePost *.hpp :PerformAstyle
