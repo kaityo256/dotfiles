@@ -92,6 +92,8 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 "------------------------------------------------------------------------
+" gnuplot file(*.plt)のシンタックスハイライティング
+au BufRead,BufNewFile *.plt set filetype=gnuplot
 
 " Ruby Formatter (rufo)を使う
 let g:rufo_auto_formatting=1

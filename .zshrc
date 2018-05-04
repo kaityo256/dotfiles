@@ -77,6 +77,7 @@ EDITOR=vim
 alias -s rb=ruby
 alias -s py=python
 alias -s pdf=open
+alias -s bib=open
 
 # タブの設定
 set tabstop=2
