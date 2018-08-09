@@ -17,6 +17,8 @@ set softtabstop=2
 set shiftwidth=2
 " 検索結果のハイライト表示
 set hlsearch
+" ESC連打で検索ハイライト消去
+nnoremap  <ESC><ESC> :<C-u>nohlsearch<cr><Esc>
 
 " カーソル位置等の設定の保存と復元
 autocmd BufWinLeave ?* silent mkview
