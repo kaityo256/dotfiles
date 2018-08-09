@@ -3,3 +3,6 @@ Style/StringLiterals:
 
 Style/AsciiComments:
   Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
