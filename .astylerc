@@ -8,6 +8,5 @@
 --keep-one-line-blocks
 --align-pointer=name
 --align-reference=name
---break-return-type
 --attach-return-type-decl
 --suffix=none 
