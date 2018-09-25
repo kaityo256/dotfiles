@@ -104,3 +104,5 @@ let g:rufo_auto_formatting=1
 syntax on
 " ファイルタイプを(インデントやプラグインも含めて)有効化
 filetype plugin indent on
+
+let g:ale_tex_chktex_options = "-n 8"
