@@ -4,5 +4,17 @@ Style/StringLiterals:
 Style/AsciiComments:
   Enabled: false
 
+Style/NumericLiterals:
+  Enabled: false
+
+Layout/SpaceAroundOperators:
+  Enabled: false
+
 Metrics/MethodLength:
   Max: 20
+
+Metrics/LineLength:
+  Max: 100
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
