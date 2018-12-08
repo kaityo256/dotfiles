@@ -47,24 +47,6 @@ function! s:vimrc_local(loc)
 endfunction
 
 "------------------------------------------------------------------------
-" *.cpp, *.hppを保存時に自動でastyleをかける
-"------------------------------------------------------------------------
-function! _performAstyle()
-  set cmdheight=3
-  exe ":!astyle %"
-  exe ":e!"
-  set cmdheight=1
-endfunction
-
-command! PerformAstyle call _performAstyle()
-
-augroup auto_astyle
-  autocmd!
-  autocmd bufWritePost *.cpp :PerformAstyle
-  autocmd bufWritePost *.hpp :PerformAstyle
-augroup END
-
-"------------------------------------------------------------------------
 " dein向けの設定
 "------------------------------------------------------------------------
 
@@ -98,7 +80,7 @@ endif
 au BufRead,BufNewFile *.plt set filetype=gnuplot
 
 " Ruby Formatter (rufo)を使う
-let g:rufo_auto_formatting=1
+"let g:rufo_auto_formatting=1
 
 " ハイライト表示
 syntax on
@@ -106,3 +88,11 @@ syntax on
 filetype plugin indent on
 
 let g:ale_tex_chktex_options = "-n 8"
+
+" 保存時に自動でfixerをかける
+let g:ale_fixers = {
+    \ 'python': ['autopep8', 'black', 'isort'],
+    \ 'ruby': ['rufo'],
+    \ 'cpp': ['clang-format'],
+    \ }
+let g:ale_fix_on_save = 1
