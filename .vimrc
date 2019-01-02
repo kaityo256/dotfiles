@@ -96,3 +96,4 @@ let g:ale_fixers = {
     \ 'cpp': ['clang-format'],
     \ }
 let g:ale_fix_on_save = 1
+set encoding=utf8
