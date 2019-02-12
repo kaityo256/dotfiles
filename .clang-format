@@ -2,3 +2,4 @@ BreakStringLiterals: false
 AllowShortFunctionsOnASingleLine: Empty
 AllowShortIfStatementsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: None
+ColumnLimit: 0
