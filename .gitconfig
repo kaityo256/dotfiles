@@ -7,7 +7,7 @@
 	st = status -s
 	ci = commit -a
 	co = checkout
-  l = diff --oneline
+  l = log --oneline
 [core]
 	whitespace = cr-at-eol
 	excludesFile = ~/.gitignore_global
