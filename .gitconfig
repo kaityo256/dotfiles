@@ -1,0 +1,11 @@
+[user]
+        email = kaityo@users.sourceforge.jp
+        name = H. Watanabe
+[color]
+        ui = true
+[alias]
+        st = status -s
+        ci = commit -a
+        co = checkout
+[push]
+        default = simple
