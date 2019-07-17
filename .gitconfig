@@ -11,3 +11,5 @@
 [core]
 	whitespace = cr-at-eol
 	excludesFile = ~/.gitignore_global
+[push]
+  default = simple
