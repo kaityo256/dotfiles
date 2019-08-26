@@ -13,3 +13,5 @@
 	excludesFile = ~/.gitignore_global
 [push]
   default = simple
+[fetch]
+	prune = true
