@@ -1,11 +1,17 @@
 [user]
-        email = kaityo@users.sourceforge.jp
-        name = H. Watanabe
+	email = kaityo@users.sourceforge.jp
+	name = H. Watanabe
 [color]
-        ui = true
+	ui = true
 [alias]
-        st = status -s
-        ci = commit -a
-        co = checkout
+	st = status -s
+	ci = commit -a
+	co = checkout
+  l = log --oneline
+[core]
+	whitespace = cr-at-eol
+	excludesFile = ~/.gitignore_global
 [push]
-        default = simple
+  default = simple
+[fetch]
+	prune = true
