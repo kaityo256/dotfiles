@@ -1,3 +1,12 @@
+AllCops:
+    NewCops: disable
+
+Metrics/AbcSize:
+    Max: 100
+
+Style/FrozenStringLiteralComment:
+    Enabled: false
+
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 
@@ -13,11 +22,11 @@ Layout/SpaceAroundOperators:
 Metrics/MethodLength:
   Max: 20
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 100
 
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
-Layout/IndentHeredoc:
+Layout/HeredocIndentation:
   Enabled: false

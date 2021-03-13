@@ -1,4 +1,5 @@
 BreakStringLiterals: false
+BreakBeforeBraces: Attach
 AllowShortFunctionsOnASingleLine: Empty
 AllowShortIfStatementsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: None

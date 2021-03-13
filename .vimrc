@@ -7,18 +7,16 @@ set nonumber
 set ruler
 " ウィンドウのタイトルバーにファイル情報を表示
 set title
-" タブ入力を空白に展開
-set expandtab
 " タブストップを空白二つに
 set tabstop=2
 " タブキーを押した時に挿入される空白数
 set softtabstop=2
-" Vimが挿入するインデント幅
+" vimが挿入するインデント幅
 set shiftwidth=2
 " 検索結果のハイライト表示
 set hlsearch
-" ESC連打で検索ハイライト消去
-nnoremap  <ESC><ESC> :<C-u>nohlsearch<cr><Esc>
+" esc連打で検索ハイライト消去
+nnoremap  <esc><esc> :<c-u>nohlsearch<cr><esc>
 
 " カーソル位置等の設定の保存と復元
 autocmd BufWinLeave ?* silent mkview
@@ -98,3 +96,4 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 set encoding=utf8
 set visualbell t_vt=
+colorscheme delek
