@@ -30,3 +30,13 @@ Layout/SpaceInsideHashLiteralBraces:
 
 Layout/HeredocIndentation:
   Enabled: false
+
+Style/PerlBackrefs:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+

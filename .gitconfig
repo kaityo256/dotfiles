@@ -5,7 +5,7 @@
 	ui = true
 [alias]
 	st = status -s
-	ci = commit
+	ci = commit -a
 	co = checkout
   l = log --oneline
 [core]
@@ -15,3 +15,5 @@
   default = simple
 [fetch]
 	prune = true
+[pull]
+	ff = only
