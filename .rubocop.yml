@@ -23,7 +23,7 @@ Metrics/AbcSize:
   Max: 30
 
 Layout/SpaceInsideHashLiteralBraces:
-  EnforcedStyle: no_space
+  EnforcedStyle: space
 
 Layout/HeredocIndentation:
   Enabled: false
@@ -35,4 +35,7 @@ Style/PerlBackrefs:
   Enabled: false
 
 Documentation:
+  Enabled: false
+
+Style/IfUnlessModifier:
   Enabled: false
