@@ -1,5 +1,11 @@
 AllCops:
-  NewCops: disable
+    NewCops: disable
+
+Metrics/AbcSize:
+    Max: 100
+
+Style/FrozenStringLiteralComment:
+    Enabled: false
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
@@ -19,16 +25,10 @@ Metrics/MethodLength:
 Layout/LineLength:
   Max: 100
 
-Metrics/AbcSize:
-  Max: 30
-
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: space
 
 Layout/HeredocIndentation:
-  Enabled: false
-
-Style/FrozenStringLiteralComment:
   Enabled: false
 
 Style/PerlBackrefs:
@@ -39,3 +39,6 @@ Documentation:
 
 Style/IfUnlessModifier:
   Enabled: false
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
