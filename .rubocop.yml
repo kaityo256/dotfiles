@@ -26,7 +26,7 @@ Layout/LineLength:
   Max: 100
 
 Layout/SpaceInsideHashLiteralBraces:
-  EnforcedStyle: no_space
+  EnforcedStyle: space
 
 Layout/HeredocIndentation:
   Enabled: false
@@ -37,6 +37,8 @@ Style/PerlBackrefs:
 Documentation:
   Enabled: false
 
+Style/IfUnlessModifier:
+  Enabled: false
+
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
-
