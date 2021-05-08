@@ -1,7 +1,7 @@
 autoload -U colors; colors
 
 function rprompt-git {
-  local name st color
+  local name st color upstream pushed
   name=`git symbolic-ref HEAD 2> /dev/null | sed -e "s/refs\/heads\///g" `
   if [[ -z $name ]]; then
     return
@@ -16,7 +16,17 @@ function rprompt-git {
   else
     color=${fg[red]}
   fi
-  echo "(%{$color%}$name%{$reset_color%}) "
+  upstream=`git status -sb | grep -E "## .*\.\.\." | sed -r 's/##.*\.\.\.([^ ]*).*/\1/'`
+  if [[ -z $upstream ]]; then
+    pushed=''
+  else
+    if [[ -z `git log ${upstream}..${name}` ]]; then
+      pushed="%{${fg[green]}%}[up]%{$reset_color%}"
+    else
+      pushed="%{${fg[red]}%}[up]%{$reset_color%}"
+    fi
+  fi
+  echo "(%{$color%}$name%{$reset_color%})${pushed}"
 }
 
 function rprompt-svn {
