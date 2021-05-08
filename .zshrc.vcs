@@ -1,20 +1,18 @@
 autoload -U colors; colors
 
 function rprompt-git {
-  local name st color upstream pushed
+  local name st branch upstream pushed
   name=`git symbolic-ref HEAD 2> /dev/null | sed -e "s/refs\/heads\///g" `
   if [[ -z $name ]]; then
     return
   fi
   st=`git status 2> /dev/null`
   if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
-    color=${fg[green]}
+    branch="%{${fg[green]}%}($name)%{$reset_color%}"
   elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
-    color=${fg[yellow]}
-  elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
-    color=${fg_bold[red]}
+    branch="%{${fg[yellow]}%}($name)%{$reset_color%}"
   else
-    color=${fg[red]}
+    branch="%{${fg[red]}%}($name)%{$reset_color%}"
   fi
   upstream=`git status -sb | grep -E "## .*\.\.\." | sed -r 's/##.*\.\.\.([^ ]*).*/\1/'`
   if [[ -z $upstream ]]; then
@@ -26,7 +24,7 @@ function rprompt-git {
       pushed="%{${fg[red]}%}[up]%{$reset_color%}"
     fi
   fi
-  echo "(%{$color%}$name%{$reset_color%})${pushed}"
+  echo "${branch}${pushed}"
 }
 
 function rprompt-svn {
