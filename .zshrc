@@ -89,4 +89,4 @@ set expandtab
 #------------------------------------------------------------------------
 
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine # ローカル設定
-[ -f ~/.zshrc.vcs ] && source ~/.zshrc.vcs
+[ -f ~/.zshrc_vcs.zsh ] && source ~/.zshrc_vcs.zsh
