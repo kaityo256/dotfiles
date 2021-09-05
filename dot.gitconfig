@@ -9,11 +9,10 @@
 [core]
 	whitespace = cr-at-eol
 	excludesFile = ~/.gitignore_global
+	editor = vim
 [push]
 	default = simple
 [fetch]
 	prune = true
 [pull]
 	ff = only
-[init]
-	defaultBranch = main
