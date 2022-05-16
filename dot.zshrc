@@ -88,5 +88,5 @@ set expandtab
 # その他の設定の読み込み
 #------------------------------------------------------------------------
 
-[ -f ~/.zshrc.mine ] && source ~/.zshrc.mine # ローカル設定
+[ -f ~/.zshrc_mine.zsh ] && source ~/.zshrc_mine.zsh # ローカル設定
 [ -f ~/.zshrc_vcs.zsh ] && source ~/.zshrc_vcs.zsh
