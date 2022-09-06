@@ -33,8 +33,8 @@ function git-prompt {
 
 function svn-prompt {
   local name st color stt
-  st=`LANG=C svn status --depth immediates 2>&1`
-  if [[ $st =~ "is not" ]]; then
+  st=`svn status 2>&1`
+  if [[ $st =~ "W155007" ]]; then
     return
   fi
   stt=""
