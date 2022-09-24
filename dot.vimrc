@@ -13,6 +13,7 @@ set tabstop=2
 set softtabstop=2
 " vimが挿入するインデント幅
 set shiftwidth=2
+set expandtab
 " 検索結果のハイライト表示
 set hlsearch
 " esc連打で検索ハイライト消去
