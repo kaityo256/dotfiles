@@ -97,5 +97,4 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 set encoding=utf8
 set visualbell t_vt=
-colorscheme delek
 set belloff=all
