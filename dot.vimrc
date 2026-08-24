@@ -98,3 +98,4 @@ let g:ale_fix_on_save = 1
 set encoding=utf8
 set visualbell t_vt=
 set belloff=all
+set clipboard=

@@ -6,6 +6,7 @@
 [alias]
 	st = status -s
 	l = log --oneline
+	dc = diff --word-diff=color --word-diff-regex=.
 [core]
 	whitespace = cr-at-eol
 	excludesFile = ~/.gitignore_global
